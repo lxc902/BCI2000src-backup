@@ -1,0 +1,25 @@
+set( DIR_NAME "${DIR_NAME}Test/" )
+utils_set_appicon(puzzlepiece)
+utils_include(frameworks/Core)
+
+bci2000_add_target(
+  INFO "Test"
+  CONSOLEAPP sockstream_test
+  sockstream_test.cpp
+  ${PROJECT_SRC_DIR}/shared/utils/Lib/sockstream.cpp
+  OUTPUT_DIRECTORY "${PROJECT_BUILD_ROOT}/test"
+)
+
+bci2000_add_target(
+  INFO "Test"
+  CONSOLEAPP ioobjects_test
+  ioobjects_test.cpp
+  OUTPUT_DIRECTORY "${PROJECT_BUILD_ROOT}/test"
+)
+
+bci2000_add_target(
+  INFO "Test"
+  CONSOLEAPP clock_test
+  clock_test.cpp
+  OUTPUT_DIRECTORY "${PROJECT_BUILD_ROOT}/test"
+)
